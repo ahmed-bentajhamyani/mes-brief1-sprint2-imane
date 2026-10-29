@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le panier du goûter — Mise en situation</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <p class="eyebrow">Mise en situation · JavaScript</p>
+        <h1>Le panier du goûter</h1>
+        <p>Gère les produits de ton panier.</p>
+      </header>
+
+      <section class="panel">
+        <h2 id="titre-formulaire">Ajouter un produit</h2>
+        <form id="formulaire">
+          <div class="form-grid">
+            <div class="field">
+              <label for="nom">Nom du produit</label>
+              <input
+                id="nom"
+                type="text"
+                required
+                placeholder="Ex. : Jus d'orange"
+              />
+            </div>
+            <div class="field">
+              <label for="prix">Prix (DH)</label>
+              <input
+                id="prix"
+                type="number"
+                min="0.01"
+                step="0.01"
+                required
+                placeholder="Ex. : 8"
+              />
+            </div>
+          </div>
+          <div class="actions">
+            <button
+              id="bouton-enregistrer"
+              class="btn btn-primary"
+              type="submit"
+            >
+              Ajouter au panier
+            </button>
+            <button
+              id="bouton-annuler"
+              class="btn btn-secondary"
+              type="button"
+              hidden
+            >
+              Annuler
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="products">
+        <div class="section-heading">
+          <h2>Produits du panier</h2>
+          <span id="compteur" class="count">3 produit(s)</span>
+        </div>
+        <div id="liste-produits" class="cards"></div>
+        <p class="total">Total : <strong id="total">0.00 DH</strong></p>
+      </section>
+    </main>
+  </body>
+</html>
